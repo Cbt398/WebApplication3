@@ -1,0 +1,37 @@
+﻿@using WebApplication3.Models
+@model ToDoViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-xl-10">
+        <div class="card border-secondary shadow-lg bg-dark bg-gradient">
+
+            <div class="card-header bg-transparent border-secondary p-4">
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+                    <div>
+                        <h1 class="h3 text-light fw-semibold mb-1">Categories</h1>
+                        <p class="text-secondary mb-0">A cleaner queue view with fast actions.</p>
+                    </div>
+                    <a href="/home/addCategory" class="btn btn-info text-dark fw-semibold px-4">Create Category</a>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    @foreach (Category categories in Model.Categories)
+                    {
+                        <div class="list-group-item bg-transparent border-secondary px-4 py-3">
+                            <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <span class="text-light fw-semibold fs-5">@categories.Name</span>
+                                </div>
+                        <a href="/Home/EditCategory?id=@categories.Id" class="btn btn-outline-info fw-semibold">Edit</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

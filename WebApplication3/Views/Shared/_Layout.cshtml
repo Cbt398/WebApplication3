@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - ToDoItems</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-dark bg-gradient min-vh-100 text-light">
+    <header b-gla70z2p0w class="border-bottom border-secondary sticky-top bg-dark bg-gradient">
+        <nav b-gla70z2p0w class="navbar navbar-expand-lg navbar-dark">
+            <div b-gla70z2p0w class="container py-2">
+                <a class="navbar-brand fw-bold fs-4" href="/">ToDoItems</a>
+                <button b-gla70z2p0w class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-gla70z2p0w class="navbar-toggler-icon"></span>
+                </button>
+                <div b-gla70z2p0w class="collapse navbar-collapse" id="mainNav">
+                    <ul b-gla70z2p0w class="navbar-nav ms-auto align-items-lg-center gap-2 mt-3 mt-lg-0">
+                        <li b-gla70z2p0w class="nav-item"><a class="nav-link text-light" href="/">Active</a></li>
+                        <li b-gla70z2p0w class="nav-item"><a class="nav-link text-light" href="/Home/CompletedTask">Completed</a></li>
+                        <li b-gla70z2p0w class="nav-item"><a class="nav-link text-light" href="/Home/Categories">Categories</a></li>
+                        <li b-gla70z2p0w class="nav-item"><a class="btn btn-info text-dark fw-semibold px-3" href="/Home/AddToDo">New Item</a></li>
+                        <li b-gla70z2p0w class="nav-item"><a class="btn btn-outline-light fw-semibold px-3" href="/Home/AddCategory">New Category</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main b-gla70z2p0w class="container py-4 py-md-5">
+        <div>
+            @RenderBody()
+    </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+﻿@using WebApplication3.Models
+@model ToDoViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-xl-10">
+        <div class="card border-secondary shadow-lg bg-dark bg-gradient">
+
+            <div class="card-header bg-transparent border-secondary p-4">
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+                    <div>
+                        <h1 class="h3 text-light fw-semibold mb-1">Add Category</h1>
+                        <p class="text-secondary mb-0">Use categories to segment the task feed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-4 p-md-5">
+                <form method="POST" action="/home/AddCategory">
+                    <div>
+                        <label class="form-label fw-semibold text-light">Category Name</label>
+                        <input type="text" class="form-control form-control-lg border-secondary rounded-3 bg-dark text-light" name="Name" />
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-info btn-lg rounded-pill fw-semibold shadow-sm">Save Category</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@using WebApplication3.Models
+@model ToDoViewModel
+
+<div class="row justify-content-center">
+    <div class="col-12 col-xl-10">
+        <div class="card border-secondary shadow-lg bg-dark bg-gradient">
+
+            <div class="card-header bg-transparent border-secondary p-4">
+                <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+                    <div>
+                        <h1 class="h3 text-light fw-semibold mb-1">Completed Tasks</h1>
+                        <p class="text-secondary mb-0">Everything finished, newest wins at the top.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    @foreach (ToDoItems toDo in Model.ToDo)
+                    {
+                        <div class="list-group-item bg-transparent border-secondary px-4 py-3">
+                            <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+                                <div>
+                                    <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+                                        <span class="text-light fw-semibold fs-5">@toDo.Title</span>
+                                        <span class="badge bg-secondary">@toDo.Category</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-success small fw-semibold">Completed: @toDo.CompletedDate?.ToString("MM/dd/yyyy")</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
